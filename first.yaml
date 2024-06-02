@@ -1,0 +1,12 @@
+---
+- name: Start nginx and run it fast
+  hosts: all
+  become: root
+
+  tasks:
+    - name: Install Nginx
+      shell: sudo apt-get install -y nginx
+
+    - name: Start Nginx
+      shell: sudo systemctl start nginx
+
